@@ -8,16 +8,16 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: url('https://media.discordapp.net/attachments/1183866995943407667/1184516397666144296/attachment.gif?ex=65a7f15c&is=65957c5c&hm=78d8e0036271e0b1c1ecc4b8eb38c96db4c75452b955f8b5a249e024e6d2e8d3&=&width=172&height=410') no-repeat center center fixed;
-            background-size: 1080px 1080px;
             color: #fff;
             font-family: 'Courier New', monospace;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             height: 100vh;
-            transition: background-size 2s ease;
+            background: url('https://media.discordapp.net/attachments/1193017849627803740/1194491042498609222/image.png?ex=65b08b79&is=659e1679&hm=497efca012ad8137d8d23f953169dced60c0f4db7e9145b76aec0375189f73a4&=&format=webp&quality=lossless&width=228&height=264') no-repeat center center fixed;
+            background-size: cover;
         }
 
         .content {
@@ -42,27 +42,40 @@
         .socials a:hover {
             color: #f00;
         }
+        
+        #localTime {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #monkeyText {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
     </style>
     <meta name="title" content="swxs site omg">
     <meta name="description" content="Discord;@swx.gov">
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1183866995943407667/1184516397666144296/attachment.gif?ex=65a7f15c&is=65957c5c&hm=78d8e0036271e0b1c1ecc4b8eb38c96db4c75452b955f8b5a249e024e6d2e8d3&=&width=172&height=410" />
     <title>Monkey Page</title>
 </head>
 <body>
     <div class="content">
-        <h1>Welcome to the 1337 Zone</h1>
-        
+        <div id="monkeyText">monkey 🐒🐒</div>
         <div class="socials">
             <a href="https://www.instagram.com/swxlol/" target="_blank">Instagram - @swxlol</a>
             <a href="https://www.instagram.com/inthaspotlight/" target="_blank">Instagram - @inthaspotlight</a>
             <a href="https://www.tiktok.com/@inthaspotlight" target="_blank">TikTok - @inthaspotlight</a>
             <a href="https://discord.com/users/512067578974437378" target="_blank">Discord - @swx.gov</a>
         </div>
+
+        <div id="localTime"></div>
     </div>
     <script>
-        // Adding a script to trigger the background animation after the page loads
         document.addEventListener('DOMContentLoaded', function() {
-            document.body.style.backgroundSize = '100% 100%';
+            // Get user's local time
+            const localTime = new Date().toLocaleTimeString();
+
+            // Display local time
+            document.getElementById('localTime').textContent = `Local Time: ${localTime}`;
         });
     </script>
 </body>
