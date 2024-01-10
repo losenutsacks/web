@@ -18,7 +18,7 @@
             text-align: center;
             height: 100vh;
             font-size: 30px;
-            background: url('https://cdn.discordapp.com/attachments/1166660046827036812/1194527124850225232/export_1704867728414.mov?ex=65b0ad13&is=659e3813&hm=6efcf77dbe3fe529d2125f9bdb63fa2a6909bedcc64857eae427030b73fb6c2a&') center/cover fixed no-repeat;
+            background: url('https://tr.rbxcdn.com/30DAY-AvatarHeadshot-877C15E06E27BCB1EC035453D7CA3B22-Png/150/150/AvatarHeadshot/Png/noFilter') center/cover fixed no-repeat;
             background-attachment: fixed;
             background-position: 50% 50%;
             transition: background 0.5s ease;
@@ -71,12 +71,13 @@
         #localTime {
             font-size: 36px;
             margin-top: 20px;
+            color: #fff;
             transition: color 0.5s linear;
         }
     </style>
-    <meta name="title" content="Your Site Title">
-    <meta name="description" content="Your Site Description">
-    <title>Your Site Title</title>
+    <meta name="title" content="@swx.gov">
+    <meta name="description" content="Discord Troller Activities">
+    <title>@swx.gov</title>
 </head>
 <body>
     <div class="overlay"></div>
@@ -92,11 +93,20 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Get user's local time
-            const localTime = new Date().toLocaleTimeString();
+            // Update the local time every second
+            setInterval(updateLocalTime, 1000);
+            // Initial call to set the time immediately
+            updateLocalTime();
 
-            // Display local time
-            document.getElementById('localTime').textContent = `Local Time: ${localTime}`;
+            function updateLocalTime() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const localTime = `${hours}:${minutes}:${seconds}`;
+                // Display local time
+                document.getElementById('localTime').textContent = `Local Time: ${localTime}`;
+            }
         });
     </script>
 </body>
