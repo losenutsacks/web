@@ -7,47 +7,29 @@
   <meta property="og:image" content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- Google Font - Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
   <style>
     body {
-      font-family: 'Roboto', sans-serif; /* Use the custom font */
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       padding-top: 50px;
-      overflow: hidden; /* Hide overflow to prevent particles from causing scrollbars */
-      position: relative; /* Position relative for overlay */
-      margin: 0; /* Remove default margin */
-      background: url('https://tenor.com/view/moving-formation-weaving-pattern-optical-illusion-art-gif-17177299') center fixed; /* Use the provided background GIF and center it */
-      background-size: cover; /* Stretch the background to cover the entire website */
-    }
-    #background-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-      z-index: -1; /* Place overlay behind other content */
     }
     #profile-pic {
       border-radius: 50%;
       box-shadow: 0 0 20px #ffffff;
-      z-index: 1; /* Place image above overlay */
     }
     .social-links {
       list-style: none;
       padding: 0;
       margin: 0;
-      z-index: 1; /* Place buttons above overlay */
     }
     .social-link {
       display: block;
       margin: 10px;
       padding: 8px 16px;
-      background-color: #ffffff; /* White background color */
-      color: #000000; /* Black text color */
+      background-color: #ff3333; /* Red background color */
+      color: #ffffff;
       text-decoration: none;
       border-radius: 3px;
       transition: background-color 0.3s;
@@ -60,17 +42,37 @@
       margin-right: 8px;
     }
     .social-link:hover {
-      background-color: #f0f0f0; /* Lighter grey on hover */
+      background-color: #cc0000; /* Darker red on hover */
     }
 
-    /* Hover Effect on Social Links */
-    .social-link:hover {
-      transform: scale(1.1); /* Scale up on hover */
+    /* Rainbow effect for the Spotify embed and buttons */
+    @keyframes rainbow {
+      0% {
+        color: #ff0000; /* Red */
+      }
+      16% {
+        color: #ff7f00; /* Orange */
+      }
+      33% {
+        color: #ffff00; /* Yellow */
+      }
+      50% {
+        color: #00ff00; /* Green */
+      }
+      66% {
+        color: #0000ff; /* Blue */
+      }
+      83% {
+        color: #4b0082; /* Indigo */
+      }
+      100% {
+        color: #9400d3; /* Violet */
+      }
     }
 
-    /* Smooth Scroll */
-    html {
-      scroll-behavior: smooth;
+    /* Apply rainbow effect to the Spotify embed and buttons */
+    .rainbow {
+      animation: rainbow 4s infinite;
     }
 
     /* Mobile Styles */
@@ -94,5 +96,8 @@
     <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
     <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
   </ul>
+
+  <!-- Spotify Embed Code with autoplay and rainbow effect -->
+  <iframe class="rainbow" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen"></iframe>
 </body>
 </html>
