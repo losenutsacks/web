@@ -18,10 +18,11 @@
     #profile-pic {
       border-radius: 50%;
       box-shadow: 0 0 20px #ffffff;
+      transition: transform 0.1s ease-in-out;
     }
     .social-link {
-      display: inline-block;
-      margin: 10px;
+      display: block;
+      margin: 10px auto;
       padding: 8px 16px;
       background-color: #ffffff;
       color: #333333;
@@ -31,14 +32,15 @@
       cursor: pointer;
       font-size: 14px;
       position: relative;
-      animation: starPattern 2s infinite;
+      overflow: hidden;
+      animation: linearInterpolation 2s infinite;
     }
-    @keyframes starPattern {
+    @keyframes linearInterpolation {
       0%, 100% {
-        transform: translateY(0);
+        transform: translateX(0);
       }
       50% {
-        transform: translateY(-5px);
+        transform: translateX(100%);
       }
     }
     .social-link i {
@@ -58,12 +60,31 @@
   </style>
 </head>
 <body>
+  <audio controls autoplay loop id="music">
+    <source src="swxfeddedfunk.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
   <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
+
   <h1>Welcome to my social page?!?!</h1>
-  <a class="social-link" href="https://www.roblox.com/users/4126963942/profile"><i class="fab fa-roblox"></i> Roblox Profile 1</a>
-  <a class="social-link" href="https://www.roblox.com/users/4286115939/profile"><i class="fab fa-roblox"></i> Roblox Profile 2</a>
-  <a class="social-link" href="https://discord.com/users/512067578974437378"><i class="fab fa-discord"></i> Discord Profile</a>
-  <a class="social-link" href="https://www.instagram.com/swxlol/"><i class="fab fa-instagram"></i> Instagram 1</a>
-  <a class="social-link" href="https://www.instagram.com/inthaspotlight/"><i class="fab fa-instagram"></i> Instagram 2</a>
+  <a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol </a>
+  <a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight2</a>
+  <a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> Roblox @rottingsight</a>
+  <a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> Roblox @swx </a>
+  <a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank"><i class="fab fa-discord"></i> @swx.gov {512067578974437378} </a>
+
+  <script>
+    const audio = document.getElementById('music');
+    const profilePic = document.getElementById('profile-pic');
+
+    audio.addEventListener('play', () => {
+      profilePic.style.animation = 'beatAnimation 0.1s infinite alternate';
+    });
+
+    audio.addEventListener('pause', () => {
+      profilePic.style.animation = 'none';
+    });
+  </script>
 </body>
 </html>
