@@ -9,29 +9,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
-      background-color: #0f0f0f;
+      background-color: #282c35;
       color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       padding-top: 50px;
+      margin: 0;
     }
     #profile-pic {
       border-radius: 50%;
       box-shadow: 0 0 20px #ffffff;
     }
+    h1 {
+      color: #ff3333;
+    }
     .social-links {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .social-link {
-      display: block;
+      display: inline-block;
       margin: 10px;
-      padding: 8px 16px;
+      padding: 10px 20px;
       background-color: #ff3333; /* Red background color */
       color: #ffffff;
       text-decoration: none;
-      border-radius: 3px;
+      border-radius: 5px;
       transition: background-color 0.3s;
       cursor: pointer;
       font-size: 16px; /* Slightly larger font size */
@@ -45,59 +52,33 @@
       background-color: #cc0000; /* Darker red on hover */
     }
 
-    /* Rainbow effect for the Spotify embed and buttons */
-    @keyframes rainbow {
-      0% {
-        color: #ff0000; /* Red */
-      }
-      16% {
-        color: #ff7f00; /* Orange */
-      }
-      33% {
-        color: #ffff00; /* Yellow */
-      }
-      50% {
-        color: #00ff00; /* Green */
-      }
-      66% {
-        color: #0000ff; /* Blue */
-      }
-      83% {
-        color: #4b0082; /* Indigo */
-      }
-      100% {
-        color: #9400d3; /* Violet */
-      }
-    }
-
-    /* Apply rainbow effect to the Spotify embed and buttons */
-    .rainbow {
-      animation: rainbow 4s infinite;
-    }
-
     /* Mobile Styles */
     @media only screen and (max-width: 600px) {
       body {
         padding-top: 20px; /* Adjust spacing for smaller screens */
       }
-      .social-link {
-        width: 80%; /* Adjust width of social links for better readability */
-      }
     }
   </style>
 </head>
 <body>
-  <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
-  <h1>Welcome to my social page?!?!</h1>
-  <ul class="social-links">
-    <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol</a></li>
-    <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight</a></li>
-    <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> @rottingsight</a></li>
-    <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
-    <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
-  </ul>
+  <header>
+    <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
+    <h1>Welcome to my social page?!?!</h1>
+  </header>
 
-  <!-- Spotify Embed Code with autoplay and rainbow effect -->
-  <iframe class="rainbow" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen"></iframe>
+  <nav>
+    <ul class="social-links">
+      <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol</a></li>
+      <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight</a></li>
+      <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> @rottingsight</a></li>
+      <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
+      <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Spotify Embed Code with black background -->
+  <section>
+    <iframe src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen" style="background-color: black;"></iframe>
+  </section>
 </body>
 </html>
