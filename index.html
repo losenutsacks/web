@@ -11,9 +11,6 @@
   <!-- Google Font - Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
   <style>
     body {
       font-family: 'Roboto', sans-serif; /* Use the custom font */
@@ -21,6 +18,9 @@
       padding-top: 50px;
       overflow: hidden; /* Hide overflow to prevent particles from causing scrollbars */
       position: relative; /* Position relative for overlay */
+      margin: 0; /* Remove default margin */
+      background: url('https://tenor.com/view/moving-formation-weaving-pattern-optical-illusion-art-gif-17177299') center fixed; /* Use the provided background GIF and center it */
+      background-size: cover; /* Stretch the background to cover the entire website */
     }
     #background-overlay {
       position: absolute;
@@ -46,8 +46,8 @@
       display: block;
       margin: 10px;
       padding: 8px 16px;
-      background-color: #ff3333; /* Red background color */
-      color: #ffffff;
+      background-color: #ffffff; /* White background color */
+      color: #000000; /* Black text color */
       text-decoration: none;
       border-radius: 3px;
       transition: background-color 0.3s;
@@ -60,7 +60,7 @@
       margin-right: 8px;
     }
     .social-link:hover {
-      background-color: #cc0000; /* Darker red on hover */
+      background-color: #f0f0f0; /* Lighter grey on hover */
     }
 
     /* Hover Effect on Social Links */
@@ -82,22 +82,9 @@
         width: 80%; /* Adjust width of social links for better readability */
       }
     }
-
-    /* Particles.js Container */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #0f0f0f; /* Set background color for particles */
-      z-index: -1; /* Place particles behind other content */
-    }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
-
-  <div id="background-overlay"></div>
-
   <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
   <h1>Welcome to my social page?!?!</h1>
   <ul class="social-links">
@@ -107,18 +94,5 @@
     <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
     <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
   </ul>
-
-  <!-- Spotify Embed Code with autoplay and rainbow effect -->
-  <iframe class="rainbow" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen"></iframe>
-
-  <!-- Particles.js Initialization Script -->
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        // Particle settings (customize as needed)
-      },
-      // Additional settings (customize as needed)
-    });
-  </script>
 </body>
 </html>
