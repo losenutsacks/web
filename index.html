@@ -20,7 +20,7 @@
       box-shadow: 0 0 20px #ffffff;
     }
     .social-link {
-      display: block;
+      display: inline-block;
       margin: 20px;
       padding: 10px 20px;
       background-color: #ff5500;
@@ -30,6 +30,13 @@
       transition: background-color 0.3s;
       cursor: pointer;
       font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(30, end);
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
     }
     .social-link i {
       margin-right: 10px;
@@ -41,11 +48,10 @@
 </head>
 <body>
   <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
-  <h1>Connect with me!</h1>
+  <h1 class="social-link">Connect with me!</h1>
   <a class="social-link" href="https://www.roblox.com/users/4126963942/profile"><i class="fab fa-roblox"></i> Roblox Profile 1</a>
   <a class="social-link" href="https://www.roblox.com/users/4286115939/profile"><i class="fab fa-roblox"></i> Roblox Profile 2</a>
-  <a class="social-link" href="https://www.roblox.com/users/4126963942/profile"><img src="path/to/Roblox_Player_2019.png" alt="Roblox Icon" height="16" width="16"> Roblox Profile 1</a>
-  <a class="social-link" href="https://www.discord.com/users/512067578974437378"><i class="fab fa-discord"></i> Discord Profile</a>
+  <a class="social-link" href="https://discord.com/users/512067578974437378"><i class="fab fa-discord"></i> Discord Profile</a>
   <a class="social-link" href="https://www.instagram.com/swxlol/"><i class="fab fa-instagram"></i> Instagram 1</a>
   <a class="social-link" href="https://www.instagram.com/inthaspotlight/"><i class="fab fa-instagram"></i> Instagram 2</a>
 </body>
