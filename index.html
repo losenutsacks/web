@@ -18,12 +18,23 @@
             text-align: center;
             height: 100vh;
             font-size: 30px;
-            background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: url('https://cdn.discordapp.com/attachments/1166660046827036812/1194527124850225232/export_1704867728414.mov?ex=65b0ad13&is=659e3813&hm=6efcf77dbe3fe529d2125f9bdb63fa2a6909bedcc64857eae427030b73fb6c2a&') center/cover fixed no-repeat;
+            background-attachment: fixed;
+            background-position: 50% 50%;
+            transition: background 0.5s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
         }
 
         .content {
+            z-index: 1; /* Ensure content is above the overlay */
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
@@ -62,25 +73,13 @@
             margin-top: 20px;
             transition: color 0.5s linear;
         }
-
-        /* Rainbow animation */
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
     </style>
     <meta name="title" content="Your Site Title">
     <meta name="description" content="Your Site Description">
     <title>Your Site Title</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="content">
         <div class="socials">
             <a href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i>Instagram - @swxlol</a>
