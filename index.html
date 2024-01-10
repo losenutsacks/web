@@ -15,14 +15,19 @@
       text-align: center;
       padding-top: 50px;
       margin: 0;
+      overflow: hidden;
     }
     #profile-pic {
       border-radius: 50%;
       box-shadow: 0 0 20px #ffffff;
     }
     h1 {
-      color: #ff6666;
       margin-bottom: 20px;
+      background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbow 5s infinite;
     }
     .social-links {
       list-style: none;
@@ -93,6 +98,30 @@
       height: 352px;
     }
 
+    /* Floating and spinning animation for "Eerie was here" text */
+    .floating-text {
+      position: absolute;
+      animation: floatAndSpin 5s linear infinite;
+    }
+
+    @keyframes floatAndSpin {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(100px, 100px) rotate(90deg);
+      }
+      50% {
+        transform: translate(0, 200px) rotate(180deg);
+      }
+      75% {
+        transform: translate(-100px, 100px) rotate(270deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+      }
+    }
+
     /* Mobile Styles */
     @media only screen and (max-width: 600px) {
       body {
@@ -121,5 +150,10 @@
   <section>
     <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
+
+  <!-- Floating and spinning "Eerie was here" text -->
+  <div class="floating-text">
+    <h2>Eerie was here</h2>
+  </div>
 </body>
 </html>
