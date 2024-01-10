@@ -17,34 +17,36 @@
             justify-content: center;
             text-align: center;
             height: 100vh;
-            background: url('https://media.discordapp.net/attachments/1145025121837400155/1145510877336977469/70a4546d-c2d2-4e28-8e8c-4f35245da7d7.gif?ex=65adb2a3&is=659b3da3&hm=f1d030e06f3ec9a75e978f6fb7c05f5f7d32610a357b23242ae8113b978318cd&') no-repeat center center fixed;
-            background-size: cover;
         }
 
         .content {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
+            transition: background-color 0.5s ease;
         }
 
         .socials {
             font-size: 20px;
             margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .socials a {
-            display: block;
             margin-bottom: 10px;
             padding: 10px;
             text-decoration: none;
             color: #fff;
             background-color: #333;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .socials a:hover {
             background-color: #555;
+            color: #fff;
         }
 
         .socials i {
@@ -54,6 +56,12 @@
         #localTime {
             font-size: 24px;
             margin-top: 20px;
+            transition: color 0.5s linear;
+        }
+
+        /* ASCII animation on hover */
+        body:hover {
+            background: #000;
         }
     </style>
     <meta name="title" content="Your Site Title">
