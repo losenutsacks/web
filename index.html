@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My Socials! </title>
+  <title>My Socials!</title>
   <meta name="title" content="swx.gov">
   <meta name="description" content="Discord; @swx.gov">
   <meta property="og:image" content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Font - Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
   <style>
     body {
+      font-family: 'Roboto', sans-serif; /* Use the custom font */
       background-color: #0f0f0f;
       color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       padding-top: 50px;
+      transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark/light mode */
     }
     #profile-pic {
       border-radius: 50%;
@@ -45,57 +50,82 @@
       background-color: #cc0000; /* Darker red on hover */
     }
 
-    /* Rainbow effect for the Spotify embed and buttons */
-    @keyframes rainbow {
-      0% {
-        color: #ff0000; /* Red */
-      }
-      16% {
-        color: #ff7f00; /* Orange */
-      }
-      33% {
-        color: #ffff00; /* Yellow */
-      }
-      50% {
-        color: #00ff00; /* Green */
-      }
-      66% {
-        color: #0000ff; /* Blue */
-      }
-      83% {
-        color: #4b0082; /* Indigo */
-      }
-      100% {
-        color: #9400d3; /* Violet */
-      }
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #1f1f1f;
+      color: #ffffff;
     }
 
-    /* Apply rainbow effect to the Spotify embed and buttons */
-    .rainbow {
-      animation: rainbow 4s infinite;
+    /* Hover Effect on Social Links */
+    .social-link:hover {
+      transform: scale(1.1); /* Scale up on hover */
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
     }
 
     /* Mobile Styles */
     @media only screen and (max-width: 600px) {
-      .social-link {
-        width: 80%;
+      body {
+        padding-top: 20px; /* Adjust spacing for smaller screens */
       }
+      .social-link {
+        width: 80%; /* Adjust width of social links for better readability */
+      }
+    }
+
+    /* Dark Mode Toggle Switch */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .dark-mode-toggle-label {
+      margin-left: 8px;
     }
   </style>
 </head>
 <body>
+  <div class="dark-mode-toggle">
+    <input type="checkbox" id="dark-mode-switch" onchange="toggleDarkMode()">
+    <label for="dark-mode-switch" class="dark-mode-toggle-label">Dark Mode</label>
+  </div>
+
   <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
   <h1>Welcome to my social page?!?!</h1>
   <ul class="social-links">
-    <li class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol</li>
-    <li class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight</li>
-    <li class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> @rottingsight</li>
-    <li class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx </li>
-    <li class="social-link" href="https://discord.com/users/512067578974437378" target="_blank"><i class="fab fa-discord"></i> Discord Profile</li>
+    <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol</a></li>
+    <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight</a></li>
+    <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> @rottingsight</a></li>
+    <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
+    <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
   </ul>
 
   <!-- Spotify Embed Code with autoplay and rainbow effect -->
-  <iframe class="rainbow" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <iframe class="rainbow" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen"></iframe>
+
+  <!-- Volume Slider -->
+  <input type="range" id="volume-slider" min="0" max="100" step="1" value="100" onchange="changeVolume()">
+
+  <script>
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle("dark-mode");
+    }
+
+    // Function to change the volume of the Spotify player
+    function changeVolume() {
+      var volume = document.getElementById("volume-slider").value;
+      var iframe = document.querySelector('iframe.rainbow');
+      iframe.contentWindow.postMessage('{"method":"setVolume", "args":[' + volume + ']}', 'https://open.spotify.com');
+    }
+  </script>
 
 </body>
 </html>
