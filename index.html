@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
-      background-color: #282c35;
+      background-color: #1c1c1c;
       color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
@@ -21,7 +21,8 @@
       box-shadow: 0 0 20px #ffffff;
     }
     h1 {
-      color: #ff3333;
+      color: #ff6666;
+      margin-bottom: 20px;
     }
     .social-links {
       list-style: none;
@@ -34,8 +35,8 @@
     .social-link {
       display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
-      background-color: #ff3333; /* Red background color */
+      padding: 12px 24px;
+      background-color: #ff6666; /* Light Red background color */
       color: #ffffff;
       text-decoration: none;
       border-radius: 5px;
@@ -50,6 +51,13 @@
     }
     .social-link:hover {
       background-color: #cc0000; /* Darker red on hover */
+    }
+
+    /* Customize the Spotify embed */
+    .spotify-embed {
+      width: 300px;
+      height: 380px;
+      background-color: #333; /* Dark gray background color */
     }
 
     /* Mobile Styles */
@@ -76,9 +84,9 @@
     </ul>
   </nav>
 
-  <!-- Spotify Embed Code with black background -->
+  <!-- Spotify Embed Code with customized styles -->
   <section>
-    <iframe src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen" style="background-color: black;"></iframe>
+    <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay allow="autoplay; fullscreen"></iframe>
   </section>
 </body>
 </html>
