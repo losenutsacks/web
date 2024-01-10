@@ -3,189 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unofficial GNAA Forum & Meme Gallery</title>
+    <title>Your Name - Bio</title>
     <style>
+        /* Add your custom styles here */
         body {
-            background-color: #000;
-            color: #00FF00;
-            font-family: 'Courier New', monospace;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
             text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #FFD700;
-        }
-
-        video {
-            width: 45%;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        ::selection {
-            background-color: #00f;
-            color: #fff;
-        }
-
-        .discord-button {
-            background-color: #7289da;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        .discord-button:hover {
-            background-color: #677bc4;
-        }
-
-        .forum-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-        }
-
-        .forum-image {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .meme-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .meme-item {
-            margin: 10px;
+            color: white;
+            padding: 50px; /* Adjust the padding as needed */
+            position: relative;
             overflow: hidden;
-            border-radius: 5px;
-            display: inline-block;
         }
 
-        .meme-item img {
-            max-width: 100%;
-            border-radius: 5px;
-            transition: transform 0.2s;
+        .banner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: rotateBanner 12s linear infinite; /* Adjust the duration as needed */
         }
 
-        .meme-item:hover img {
-            transform: scale(1.1);
+        @keyframes rotateBanner {
+            0%, 20% {
+                background-image: url('https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg?ex=65b13021&is=659ebb21&hm=4a294c8a5d9daeabd6a55c5f8ff788920caec2de553fffc19a7a1f7b246dd537');
+            }
+
+            20%, 40% {
+                background-image: url('https://cdn.discordapp.com/attachments/1169213379429281835/1194667873134710975/689cc972687c4b3a584d057fcbc3b715.jpg?ex=65b13028&is=659ebb28&hm=0c7c0ec8fefba5045bb7b08b0f4c9fc1303f196b3673a4d2e8021bf8905154cf');
+            }
+
+            /* Add more images and timings as needed */
         }
 
-        .favorite-video {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
+        img {
+            border-radius: 50%;
+            max-width: 150px;
         }
 
-        .favorite-video video {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        h1, p {
+            color: white;
         }
 
-        .official-site-button {
-            background-color: #FFD700;
-            color: #000;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
+        section {
+            margin-top: 20px;
         }
 
-        .official-site-button:hover {
-            background-color: #FFA500;
+        h2 {
+            color: #333;
         }
 
-        .gnaa-forum {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            text-align: left;
-            color: #00FF00;
+        p {
+            line-height: 1.6;
+            color: #666;
         }
 
-        .gnaa-forum img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Unofficial GNAA Forum & Meme Gallery</h1>
 
-    <div class="forum-container">
-        <img class="forum-image" src="https://cdn.discordapp.com/icons/1166315256289693797/e3fda0a0c4db5882a459bdcdbaaaf7b0.webp" alt="GNAA Forum Image">
+    <header>
+        <div class="banner"></div>
+        <img src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg?ex=65b13021&is=659ebb21&hm=4a294c8a5d9daeabd6a55c5f8ff788920caec2de553fffc19a7a1f7b246dd537" alt="Your Name">
+        <h1>Your Name</h1>
+        <p>Introduction or tagline goes here.</p>
+    </header>
 
-        <p>Discuss all things GNAA and more on our unofficial GNAA forum. Join the community now!</p>
+    <!-- Rest of the code remains unchanged -->
 
-        <a class="discord-button" href="https://discord.gg/gnaa" target="_blank">Join the GNAA Discord - GNAA FTW</a>
-    </div>
-
-    <h2>Meme Gallery</h2>
-
-    <div class="meme-gallery">
-        <div class="meme-item">
-            <img src="your_meme_video_or_image_url_1" alt="Meme 1">
-        </div>
-
-        <div class="meme-item">
-            <img src="your_meme_video_or_image_url_2" alt="Meme 2">
-        </div>
-
-        <div class="meme-item">
-            <img src="https://media.discordapp.net/attachments/1051978610359144601/1068661108623282197/DDAB5E1C-A3D8-488F-8224-80D2822046E0.gif?ex=65aaf9b7&is=659884b7&hm=ffc87abbc0e2268dcfcec127ed177f0b40b172c92e60b34d41e10244feaaff71" alt="Meme 3">
-        </div>
-
-        <!-- Add more meme items as needed -->
-    </div>
-
-    <h2>Latest Videos</h2>
-
-    <video controls>
-        <source src="https://media.discordapp.net/attachments/1175529471470751765/1192707549607252009/cachedVideo.mov" type="video/quicktime">
-        Your browser does not support the video tag.
-    </video>
-
-    <video controls>
-        <source src="https://media.discordapp.net/attachments/849846203046428692/1189165192941142026/arab.MP4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="favorite-video">
-        <h2>Favorite GNAA Video</h2>
-        <video controls>
-            <source src="https://cdn.discordapp.com/attachments/1166660046827036812/1194527124850225232/export_1704867728414.mov?ex=65b0ad13&is=659e3813&hm=6efcf77dbe3fe529d2125f9bdb63fa2a6909bedcc64857eae427030b73fb6c2a&" type="video/quicktime">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <div class="gnaa-forum">
-        <h2>GNAA Forum</h2>
-        <p>Welcome to the unofficial GNAA forum! Feel free to discuss and share your thoughts.</p>
-    </div>
-
-    <a class="official-site-button" href="https://gnaa.gay" target="_blank">Official GNAA Site</a>
 </body>
 </html>
