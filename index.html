@@ -20,26 +20,29 @@
       box-shadow: 0 0 20px #ffffff;
     }
     .social-link {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 16px;
       background-color: #ffffff;
       color: #333333;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 3px;
       transition: background-color 0.3s;
       cursor: pointer;
-      font-size: 18px;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 2s steps(30, end);
+      font-size: 14px;
+      position: relative;
+      animation: starPattern 2s infinite;
     }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
+    @keyframes starPattern {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
     }
     .social-link i {
-      margin-right: 10px;
+      margin-right: 8px;
     }
     .social-link:hover {
       background-color: #00ffaa;
