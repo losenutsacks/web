@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Un-Official  GNAA Forum & Meme Gallery</title>
+    <title>Unofficial GNAA Forum & Meme Gallery</title>
     <style>
         body {
             background-color: #000;
@@ -29,19 +29,6 @@
         ::selection {
             background-color: #00f;
             color: #fff;
-        }
-
-        ::before {
-            content: "ACCESS GRANTED";
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #00FF00;
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: -1;
         }
 
         .discord-button {
@@ -97,6 +84,20 @@
             transform: scale(1.1);
         }
 
+        .favorite-video {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .favorite-video video {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
         .official-site-button {
             background-color: #FFD700;
             color: #000;
@@ -132,12 +133,12 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to the Un-Official GNAA Forum & Meme Gallery</h1>
+    <h1>Welcome to the Unofficial GNAA Forum & Meme Gallery</h1>
 
     <div class="forum-container">
         <img class="forum-image" src="https://cdn.discordapp.com/icons/1166315256289693797/e3fda0a0c4db5882a459bdcdbaaaf7b0.webp" alt="GNAA Forum Image">
 
-        <p>Discuss all things GNAA and more on our official GNAA forum. Join the community now!</p>
+        <p>Discuss all things GNAA and more on our unofficial GNAA forum. Join the community now!</p>
 
         <a class="discord-button" href="https://discord.gg/gnaa" target="_blank">Join the GNAA Discord - GNAA FTW</a>
     </div>
@@ -172,9 +173,17 @@
         Your browser does not support the video tag.
     </video>
 
+    <div class="favorite-video">
+        <h2>Favorite GNAA Video</h2>
+        <video controls>
+            <source src="https://cdn.discordapp.com/attachments/1166660046827036812/1194527124850225232/export_1704867728414.mov?ex=65b0ad13&is=659e3813&hm=6efcf77dbe3fe529d2125f9bdb63fa2a6909bedcc64857eae427030b73fb6c2a&" type="video/quicktime">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <div class="gnaa-forum">
         <h2>GNAA Forum</h2>
-        <p>Welcome to the official GNAA forum! Feel free to discuss and share your thoughts.</p>
+        <p>Welcome to the unofficial GNAA forum! Feel free to discuss and share your thoughts.</p>
     </div>
 
     <a class="official-site-button" href="https://gnaa.gay" target="_blank">Official GNAA Site</a>
