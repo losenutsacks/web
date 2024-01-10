@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="swxs site omg">
-    <meta name="description" content="Discord;@swx.gov">
-    <meta property="og:image" content="https://wxp.lol/Thumbnail.png" />
-    <title>Monkey Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        img {
-            width: 1080px; /* Set the width to 1080 pixels */
-            height: 1080px; /* Set the height to 1080 pixels */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url('https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=112&height=112') no-repeat center center fixed;
+            background-size: 200% 200%;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            transition: background-size 2s ease;
         }
 
-        pre {
-            white-space: pre-wrap; /* Preserve line breaks in the ASCII art */
-            font-family: monospace; /* Use a monospace font for better alignment */
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .socials {
+            font-size: 20px;
             margin-top: 20px;
         }
 
@@ -26,24 +35,35 @@
             display: block;
             margin-bottom: 10px;
             text-decoration: none;
-            color: #333;
+            color: #0f0;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: #f00;
         }
     </style>
+    <meta name="title" content="swxs site omg">
+    <meta name="description" content="Discord;@swx.gov">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=112&height=112" />
+    <title>Monkey Page</title>
 </head>
 <body>
-    <h1>Monkey</h1>
-    <img src="https://cdn.discordapp.com/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836" alt="Monkey Image">
-    <pre>
-   /\_/\
-  ( o.o )
-   > ^ <
-    </pre>
-    
-    <div class="socials">
-        <a href="https://www.instagram.com/swxlol/" target="_blank">Instagram - @swxlol</a>
-        <a href="https://www.instagram.com/inthaspotlight/" target="_blank">Instagram - @inthaspotlight</a>
-        <a href="https://www.tiktok.com/@inthaspotlight" target="_blank">TikTok - @inthaspotlight</a>
-        <a href="https://discord.com/users/512067578974437378" target="_blank">Discord - @swx.gov</a>
+    <div class="content">
+        <h1>Welcome to the 1337 Zone</h1>
+        
+        <div class="socials">
+            <a href="https://www.instagram.com/swxlol/" target="_blank">Instagram - @swxlol</a>
+            <a href="https://www.instagram.com/inthaspotlight/" target="_blank">Instagram - @inthaspotlight</a>
+            <a href="https://www.tiktok.com/@inthaspotlight" target="_blank">TikTok - @inthaspotlight</a>
+            <a href="https://discord.com/users/512067578974437378" target="_blank">Discord - @swx.gov</a>
+        </div>
     </div>
+    <script>
+        // Adding a script to trigger the background animation after the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.backgroundSize = '100% 100%';
+        });
+    </script>
 </body>
 </html>
