@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Video Page</title>
+    <title>Hacker Forum & Meme Gallery</title>
     <style>
         body {
             background-color: #000;
@@ -59,16 +59,67 @@
         .discord-button:hover {
             background-color: #677bc4;
         }
+
+        .forum-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .forum-image {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .meme-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .meme-item {
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .meme-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .meme-item:hover img {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <h1>1337 Hacker Video Page</h1>
+    <h1>Welcome to the Hacker Forum & Meme Gallery</h1>
 
-    <video controls>
-        <source src="https://cdn.discordapp.com/attachments/1193189960438780025/1194657558187737088/whentnd.mp4?ex=65b1268d&is=659eb18d&hm=2e0aef37cc38b4a25b2a97486e15354a5b056d6b6d758fca109b2b38b2faf4ec" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="forum-container">
+        <img class="forum-image" src="https://media.discordapp.net/attachments/1167441626398990446/1193502577623576646/caption.gif?ex=65acf2e4&is=659a7de4&hm=37f3ba94719547c1a667755e00593e50ee4282448eb5cdaf2b6dc3087dbe4e8d" alt="Forum Image">
 
-    <a class="discord-button" href="https://discord.gg/gnaa" target="_blank">Join the GNAA Discord - GNAA FTW</a>
+        <p>Discuss all things hacking and more on our exclusive hacker forum. Join the community now!</p>
+
+        <a class="discord-button" href="https://discord.gg/gnaa" target="_blank">Join the GNAA Discord - GNAA FTW</a>
+    </div>
+
+    <h2>Meme Gallery</h2>
+
+    <div class="meme-gallery">
+        <div class="meme-item">
+            <img src="your_meme_video_or_image_url_1" alt="Meme 1">
+        </div>
+
+        <div class="meme-item">
+            <img src="your_meme_video_or_image_url_2" alt="Meme 2">
+        </div>
+
+        <!-- Add more meme items as needed -->
+    </div>
 </body>
 </html>
