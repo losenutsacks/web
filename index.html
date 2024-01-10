@@ -1,172 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>trickster</title>
-<meta property="og:title" content="trickster.pw">
-<meta property="og:description" content="all part of the plan | @trickst_er on discord">
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/842610340168728588/940893684986183700/channels4_profile.jpg">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="black">
-<meta name="msapplication-navbutton-color" content="black">
-<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/842610340168728588/940893684986183700/channels4_profile.jpg" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="css/simple_console.css" />
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<script src="https://demo.web3canvas.com/html5-css3/christmas-snow-falling-with-css3-jquery/js/jquery-latest.min.js"></script>
-<script src="https://demo.web3canvas.com/html5-css3/christmas-snow-falling-with-css3-jquery/js/snowfall.jquery.js"></script>
+  <meta charset="utf-8">
+  <title>🃏 trickster 🃏</title>
+  <meta property="og:title" content="trickster.pw">
+  <meta property="og:description" content="all part of the plan | @trickst_er on discord">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/842610340168728588/940893684986183700/channels4_profile.jpg">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="black">
+  <meta name="msapplication-navbutton-color" content="black">
+  <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/842610340168728588/940893684986183700/channels4_profile.jpg" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/simple_console.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="https://demo.web3canvas.com/html5-css3/christmas-snow-falling-with-css3-jquery/js/jquery-latest.min.js"></script>
+  <script src="https://demo.web3canvas.com/html5-css3/christmas-snow-falling-with-css3-jquery/js/snowfall.jquery.js"></script>
 </head>
 <body oncontextmenu="alert('NO HACKERS ARE ALLOWED IN THIS WEBSITE, BUDDY....'); return false;">
 
-
-
 <main class="invisible">
-<div>
-trickster
-</div>
-<div>
-trickst_er#0 on discord. professional tomfoolery enthusiast and internet pant shitter.
-</div>
-<div class="span">
-</div>
-<div>
-please use discord when contacting me about:<br>
-<a href="https://discordapp.com/users/1154768569624707182" class="tiroir"></a>
-</div>
-<div>
-Silly stuff:<br>
-<a href="https://gnaa.gay" target="_blank">GNAA</a><br>
-<a href="https://gnaa.gay/retarddb" target="_blank">RetardDB</a><br>
-<a href="https://jerome.legal">Jerome</a><br>
-<a href="https://github.com/triickster">Github</a><br>
-</div>
-<div>
-Socials:<br>
-<a target="_blank" href="https://www.youtube.com/@trickstters">Youtube</a><br>
-<a target="_blank" href="https://www.roblox.com/users/307802151/profile">Roblox</a><br>
-<a target="_blank" href="https://x.com/trickst_rr">Twitter</a><br>
-</div>
-<div>
-Even more silly stuff:<br>
-<a href="https://gnaa.gay/niggermail">Niggermail</a><br>
-<a href="https://thugload.trickster.pw">Thugload</a><br>
-</div>
+  <div>
+    <h1>🃏 trickster 🃏</h1>
+  </div>
+  <div>
+    trickst_er#0 on discord. professional tomfoolery enthusiast and internet pant shitter.
+  </div>
+  <div class="span"></div>
+  <div>
+    please use discord when contacting me about:<br>
+    <a href="https://discordapp.com/users/1154768569624707182" class="tiroir"></a>
+  </div>
+  <div>
+    Silly stuff:<br>
+    <a href="https://gnaa.gay" target="_blank">GNAA</a><br>
+    <a href="https://gnaa.gay/retarddb" target="_blank">RetardDB</a><br>
+    <a href="https://jerome.legal">Jerome</a><br>
+    <a href="https://github.com/triickster">Github</a><br>
+  </div>
+  <div>
+    Socials:<br>
+    <a target="_blank" href="https://www.youtube.com/@trickstters">Youtube</a><br>
+    <a target="_blank" href="https://www.roblox.com/users/307802151/profile">Roblox</a><br>
+    <a target="_blank" href="https://x.com/trickst_rr">Twitter</a><br>
+  </div>
+  <div>
+    Even more silly stuff:<br>
+    <a href="https://gnaa.gay/niggermail">Niggermail</a><br>
+    <a href="https://thugload.trickster.pw">Thugload</a><br>
+  </div>
 </main>
 <pre aria-hidden="true"></pre>
 <script src="boot.js"></script>
 <script>
+  const url = new URL("https://trickster.pw/")
+  const src = url.searchParams
+  const mode = (src.get('mode') || '').toLowerCase()
+  const color = (src.get('color') || '').toLowerCase()
+  const word = (url.hash.substr(1) || src.get('word') || '').toLowerCase()
+  trickster.boot({ word, mode, color })
 
-			const url = new URL("https://trickster.pw/")
-			const src = url.searchParams
-			const mode  = (src.get('mode') || '').toLowerCase()
-			const color = (src.get('color') || '').toLowerCase()
-			const word  = (url.hash.substr(1) || src.get('word') || '').toLowerCase()
-			trickster.boot({word, mode, color})
+  // Old “tiroir” code
+  const s = shuffle([
+    'george floyd masturbating on a couch',
+    'your hatred of blacks',
+    'brickbattling 1v1s',
+    'gay porn',
+    'GNAA activities',
+    'meth recipes'
+  ])
 
-			// Old “tiroir” code
-			const s = shuffle([
-				'george floyd masturbating on a couch',
-				'your hatred of blacks',
-				'brickbattling 1v1s',
-				'gay porn',
-				'GNAA activities',
-				'meth recipes'
-			])
+  let c = 0;
+  const e = document.querySelector('.tiroir')
+  function swap() {
+    c = ++c % s.length
+    e.href = 'mailto:contact@trickster.pw?subject=' + s[c]
+    e.innerText = s[c]
+  }
+  swap()
+  setInterval(swap, 9000)
 
-			let c = 0;
-			const e = document.querySelector('.tiroir')
-			function swap(){
-				c = ++c % s.length
-				e.href = 'mailto:contact@trickster.pw?subject=' + s[c]
-				e.innerText = s[c]
-			}
-			swap()
-			setInterval(swap, 9000)
-
-			function shuffle(array){
-				for(let i=array.length-1; i>0; i--){
-					const j = Math.floor(Math.random() * i)
-					;[array[i], array[j]] = [array[j], array[i]]
-				}
-				return array
-			}
-
-		</script>
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      ;[array[i], array[j]] = [array[j], array[i]]
+    }
+    return array
+  }
+</script>
 <script>
-
-			 
-	
-$(document).ready(function(){
-			
-			$(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 30});
-			
-			});
-			
-			 
-		</script>
+  $(document).ready(function () {
+    $(document).snowfall({ deviceorientation: true, round: true, minSize: 1, maxSize: 8, flakeCount: 30 });
+  });
+</script>
 <style>
-	* {
-		cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎄</text></svg>") 16 0,auto; /*!emojicursor.app*/
-	}
+  * {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎄</text></svg>") 16 0, auto; /*!emojicursor.app*/
+  }
 </style>
 <script>
-
-
-	// thanks a lot agent im stealing this now buddy.
-	document.addEventListener("DOMContentLoaded", function(event) {
-	 setTimeout(() => {
-	   console.log("\n".repeat(10000));
-	   console.log(Object.defineProperties(new Error(), {
-		 message: {
-		   get() {
-			 document.body.innerHTML = '';
-			 document.head.innerHTML = '';
-			 document.body.style.backgroundColor = '#0000';
-			 document.body.style.color = '#fff';
-			 document.body.style.fontFamily = 'system-ui';
-			 document.body.style.fontSize = '2rem';
-			 document.body.style.overflow = 'hidden';
-			 const img = document.createElement('img');
-			 img.src = 'https://cdn.discordapp.com/attachments/1006306278605336727/1046017125250244729/it_wants_you-1.gif'; 
-			 img.style.position = 'absolute';
-			 img.style.top = '5px';
-			 img.style.left = '50px';
-			 img.style.width = '0px';
-			 img.style.height = '0px';
-			 img.style.transition = 'all 3s ease-in-out';
-			 document.body.appendChild(img);
-			 setTimeout(() => {
-			   img.style.width = '100%';
-			   img.style.height = '100%';
-			   setTimeout(() => {
-				 const text = document.createElement('p');
-				 text.innerText = 'Yo, Yo, Yo 🪀! It’s hump day 🐫 What I need you to do is tag 3️⃣ big dick 🍆📈 ass 🍑 niggas under this tweet 🐥right here. I 👁️need some more➕niggas  🫂to do this "Bust 💥That🌋 Nut💦" challenge 🥇🥈🥉with. And Im also giving away💰🛍️ another hunnid 💯free subscriptions 🎟️to my only fans 🔐. Be looking out for that tweet🐥📝 later on today. Dont forget to tag 🔖them 3 niggers 🕺🏽🕺🏽🕺🏽out there. If you one of them big📈 dick🍆 nigga, tag yaself🏷️! Hump Day🐫! Fuck 🤫with ya boy! Nude Barber💈✂️';
-				 text.style.position = 'absolute';
-				 text.style.top = '50%';
-				 text.style.left = '50%';
-				 text.style.transform = 'translate(-50%, -50%)';
-				 text.style.backgroundColor = '#000000cc';
-				 text.style.padding = '1rem';
-				 text.style.fontFamily = 'system-ui';
-				 text.style.fontSize = '2rem';
-				 text.style.color = '#fff';
-				 text.style.borderRadius = '5px';
-				 text.style.transition = 'all 3s ease-in-out';
-				 document.body.appendChild(text);
-			   }, 3000);
-			 }, 100);
-		   }
-		 },
-		 toString: {
-		   value() {
-			 return (new Error).stack.includes('toString@') && alert('Safari');
-		   }
-		 }
-	   }));
-	 }, 30);
-   });
-   
-	   </script>
-</body>
-</html>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    setTimeout(() => {
+      console.log("\n".repeat(10000));
+      console.log(Object.defineProperties(new Error(), {
+        message: {
+          get() {
+            document.body.innerHTML = '';
+            document.head.innerHTML = '';
+            document.body.style.backgroundColor = '#0000';
+            document.body.style.color = '#fff';
+            document.body.style.fontFamily = 'system-ui';
+            document.body.style.fontSize = '2rem';
+            document.body.style.overflow = 'hidden';
+            const img = document.createElement('img');
+            img.src = 'https://cdn.discordapp.com/attachments/1006306278605336727/1046017125250244729/it_wants_you-1.gif';
+            img.style.position = 'absolute';
+            img.style.top = '5px';
+            img.style.left = '50px';
+            img.style.width = '0px';
+            img.style.height = '0px';
+            img.style.transition = 'all 3s ease-in-out';
+            document.body.appendChild(img);
+            setTimeout(() => {
+              img.style.width = '100%';
+              img.style.height = '100%';
+              setTimeout(() => {
+                const text = document.createElement('p');
+                text.innerText = 'Yo, Yo, Yo 🪀! It’s hump day 🐫 What I need you to do is tag 3️⃣ big dick 🍆📈 ass 🍑 nigg
