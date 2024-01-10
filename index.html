@@ -6,10 +6,10 @@
   <meta name="title" content="work in progress!!!!">
   <meta name="description" content="Discord; @swx.gov">
   <meta property="og:image" content="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-877C15E06E27BCB1EC035453D7CA3B22-Png/150/150/AvatarHeadshot/Png/noFilter" />
-  <title>ASCII Interpolation with Butterflies</title>
+  <title>SWX SWX SWX>
   <style>
     body {
-      background-color: black;
+      background-color: #272727; /* Dark gray background */
       color: white;
       display: flex;
       align-items: center;
@@ -19,6 +19,7 @@
       font-size: 4em; /* 4 times bigger */
       font-family: 'Courier New', monospace; /* Consistent font for ASCII effect */
       overflow: hidden; /* Hide overflow to prevent scrollbars */
+      position: relative;
     }
 
     .butterfly {
@@ -99,10 +100,29 @@
       });
     }
 
+    function updateTitle(event) {
+      const { clientX, clientY } = event;
+
+      const title = document.querySelector('title');
+      const x = window.innerWidth / 2;
+      const y = window.innerHeight / 2;
+
+      // Interpolate position based on mouse movement
+      const interpolatedX = x + (clientX - x) * 0.02; // Adjust the speed
+      const interpolatedY = y + (clientY - y) * 0.02;
+
+      title.style.position = 'absolute';
+      title.style.left = `${interpolatedX}px`;
+      title.style.top = `${interpolatedY}px`;
+    }
+
     setInterval(updateText, 50);
 
     // Update butterflies on mouse move
     document.addEventListener("mousemove", updateButterflies);
+
+    // Update title position on mouse move
+    document.addEventListener("mousemove", updateTitle);
   </script>
 </body>
 </html>
