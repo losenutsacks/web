@@ -1,1 +1,56 @@
-I HATE HTML!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Video Page</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        ::selection {
+            background-color: #00f;
+            color: #fff;
+        }
+
+        ::before {
+            content: "ACCESS GRANTED";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #0f0;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>1337 Hacker Video Page</h1>
+
+    <video controls>
+        <source src="https://cdn.discordapp.com/attachments/1193189960438780025/1194657558187737088/whentnd.mp4?ex=65b1268d&is=659eb18d&hm=2e0aef37cc38b4a25b2a97486e15354a5b056d6b6d758fca109b2b38b2faf4ec" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
