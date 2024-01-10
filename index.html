@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="title" content="work in progress!!!!">
-  <meta name="description" content="Discord; @swx.gov">
+  <meta name="title" content="Work in Progress!">
+  <meta name="description" content="Discord: @swx.gov">
   <meta property="og:image" content="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-877C15E06E27BCB1EC035453D7CA3B22-Png/150/150/AvatarHeadshot/Png/noFilter" />
-  <title>SWX SWX SWX>
+  <title>swx swx swx</title>
   <style>
     body {
-      background-color: #272727; /* Dark gray background */
+      background-color: #272727;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      font-size: 4em; /* 4 times bigger */
-      font-family: 'Courier New', monospace; /* Consistent font for ASCII effect */
-      overflow: hidden; /* Hide overflow to prevent scrollbars */
+      font-size: 4em;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
       position: relative;
     }
 
     .butterfly {
       position: absolute;
-      pointer-events: none; /* Butterflies won't interfere with mouse events */
+      pointer-events: none;
+      text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
     }
   </style>
 </head>
@@ -32,8 +33,8 @@
   <script>
     const text = "swx";
     const colors = ["red", "green"];
-    const duration = 1500; // Increased duration for a slower reveal
-    const butterflyCount = 40; // Number of butterflies
+    const duration = 1500;
+    const butterflyCount = 40;
 
     function interpolateColors(color1, color2, ratio) {
       const r1 = parseInt(color1.slice(1, 3), 16);
@@ -54,12 +55,12 @@
     function updateText() {
       const currentTime = new Date().getTime();
       const progress = (currentTime % duration) / duration;
-      const ratio = Math.abs(progress - 0.5) * 2; // Linear interpolation
+      const ratio = Math.abs(progress - 0.5) * 2;
 
       const color = interpolateColors(colors[0], colors[1], ratio);
       document.body.style.color = color;
 
-      const revealIndex = Math.floor(text.length * progress * 2); // Adjusted to reveal 'swx'
+      const revealIndex = Math.floor(text.length * progress * 2);
       const revealedText = text.slice(0, revealIndex);
       document.body.textContent = revealedText;
     }
@@ -67,7 +68,7 @@
     function createButterfly() {
       const butterfly = document.createElement("div");
       butterfly.className = "butterfly";
-      butterfly.textContent = "Ƹ̵̡Ӝ̵̨̄Ʒ"; // Butterfly symbol
+      butterfly.textContent = "Ƹ̵̡Ӝ̵̨̄Ʒ";
       document.body.appendChild(butterfly);
 
       return butterfly;
@@ -82,8 +83,8 @@
       const { clientX, clientY } = event;
 
       butterflies.forEach((butterfly, index) => {
-        const progress = (index + 1) / butterflyCount; // Distribute butterflies along the progress
-        const ratio = Math.abs(progress - 0.5) * 2; // Linear interpolation
+        const progress = (index + 1) / butterflyCount;
+        const ratio = Math.abs(progress - 0.5) * 2;
 
         const color = interpolateColors(colors[0], colors[1], ratio);
         butterfly.style.color = color;
@@ -91,7 +92,6 @@
         const x = window.innerWidth * progress;
         const y = window.innerHeight * progress;
 
-        // Interpolate position based on mouse movement
         const interpolatedX = clientX + (x - clientX) * ratio;
         const interpolatedY = clientY + (y - clientY) * ratio;
 
@@ -107,8 +107,7 @@
       const x = window.innerWidth / 2;
       const y = window.innerHeight / 2;
 
-      // Interpolate position based on mouse movement
-      const interpolatedX = x + (clientX - x) * 0.02; // Adjust the speed
+      const interpolatedX = x + (clientX - x) * 0.02;
       const interpolatedY = y + (clientY - y) * 0.02;
 
       title.style.position = 'absolute';
@@ -118,10 +117,7 @@
 
     setInterval(updateText, 50);
 
-    // Update butterflies on mouse move
     document.addEventListener("mousemove", updateButterflies);
-
-    // Update title position on mouse move
     document.addEventListener("mousemove", updateTitle);
   </script>
 </body>
