@@ -10,7 +10,7 @@
     <meta property="og:image"
         content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont"> <!-- Replace with your custom font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
         /* General Styles */
         body {
@@ -18,7 +18,7 @@
             background-size: 400% 400%;
             animation: gradientAnimation 15s infinite alternate;
             color: #ffffff;
-            font-family: 'YourCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             padding-top: 50px;
             margin: 0;
@@ -39,31 +39,23 @@
         /* Title Styles */
         h1 {
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: rainbow 1s infinite;
             font-weight: bold;
             font-size: 2em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Social Links Styles */
-        .social-links {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
+        .social-buttons {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 20px 0;
         }
 
-        .social-link {
-            display: inline-block;
+        .social-button {
             margin: 10px;
             padding: 12px 24px;
-            background-color: #1db954;
+            background-color: #3498db;
             color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
@@ -72,68 +64,23 @@
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-            border: 2px solid #1db954;
+            border: 2px solid #3498db;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            animation: rainbow 5s infinite;
         }
 
-        .social-link i {
+        .social-button i {
             margin-right: 8px;
             font-size: 20px;
         }
 
-        .social-link:hover {
-            background-color: #168f3f;
+        .social-button:hover {
+            background-color: #297fb8;
             color: #ffffff;
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
-        /* Rainbow Animation Styles */
-        @keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-
-            16% {
-                color: #ff7f00;
-            }
-
-            33% {
-                color: #ffff00;
-            }
-
-            50% {
-                color: #00ff00;
-            }
-
-            66% {
-                color: #0000ff;
-            }
-
-            83% {
-                color: #4b0082;
-            }
-
-            100% {
-                color: #9400d3;
-            }
-        }
-
-        /* Spotify Embed Styles */
-        .spotify-embed {
-            border-radius: 12px;
-            width: 100%;
-            height: 352px;
-        }
-
-        /* Responsive Styles */
-        @media only screen and (max-width: 600px) {
-            body {
-                padding-top: 20px;
-            }
-        }
-
+        /* Gradient Animation Styles */
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 0%;
@@ -143,6 +90,7 @@
             }
         }
 
+        /* Fade In Animation Styles */
         @keyframes fadeInDown {
             0% {
                 opacity: 0;
@@ -170,20 +118,19 @@
         <h1>Welcome to my social page?!?!</h1>
     </header>
 
-    <nav>
-        <ul class="social-links">
-            <!-- Social Links -->
-            <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-instagram" aria-hidden="true"></i> @swxlol</a></li>
-            <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-instagram" aria-hidden="true"></i> @inthaspotlight</a></li>
-            <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-roblox" aria-hidden="true"></i> @rottingsight</a></li>
-            <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank" rel="noopener noreferrer"><i
-                        class="fab fa-roblox" aria-hidden="true"></i> @swx</a></li>
-            <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord Profile</a></li>
-        </ul>
-    </nav>
+    <div class="social-buttons">
+        <!-- Social Buttons -->
+        <a class="social-button" href="https://www.instagram.com/swxlol/" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-instagram" aria-hidden="true"></i> Instagram @swxlol</a>
+        <a class="social-button" href="https://www.instagram.com/inthaspotlight/" target="_blank"
+            rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram @inthaspotlight</a>
+        <a class="social-button" href="https://www.roblox.com/users/4126963942/profile" target="_blank"
+            rel="noopener noreferrer"><i class="fab fa-roblox" aria-hidden="true"></i> Roblox @rottingsight</a>
+        <a class="social-button" href="https://www.roblox.com/users/4286115939/profile" target="_blank"
+            rel="noopener noreferrer"><i class="fab fa-roblox" aria-hidden="true"></i> Roblox @swx</a>
+        <a class="social-button" href="https://discord.com/users/512067578974437378" target="_blank"
+            rel="noopener noreferrer"><i class="fab fa-discord" aria-hidden="true"></i> Discord Profile</a>
+    </div>
 
     <section>
         <!-- Spotify Embed -->
