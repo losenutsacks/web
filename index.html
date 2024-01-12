@@ -1,155 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>My Socials!</title>
-  <meta name="title" content="swx.gov">
-  <meta name="description" content="Discord; @swx.gov">
-  <meta property="og:image" content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    body {
-      background-color: #1c1c1c;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding-top: 50px;
-      margin: 0;
-      overflow: hidden;
-    }
-    #profile-pic {
-      border-radius: 50%;
-      box-shadow: 0 0 20px #ffffff;
-    }
-    h1 {
-      margin-bottom: 20px;
-      background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: rainbow 5s infinite;
-    }
-    .social-links {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .social-link {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 24px;
-      /* Black buttons with white text */
-      background-color: black;
-      color: white;
-      /* End of button styles */
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-      cursor: pointer;
-      font-size: 16px; /* Slightly larger font size */
-      font-weight: bold; /* Bold text */
-      text-align: center;
-      border: 2px solid black; /* Black outline */
-    }
-    .social-link i {
-      margin-right: 8px;
-    }
-    .social-link:hover {
-      background-color: #333; /* Darker black on hover */
-      color: white; /* White text on hover */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Socials!</title>
+    <meta name="title" content="swx.gov">
+    <meta name="description" content="Connect with me on Discord: @swx.gov">
+    <meta property="og:image"
+        content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            margin: 0;
+            overflow: hidden;
+        }
 
-    /* Rainbow effect on button hover */
-    @keyframes rainbow {
-      0% {
-        color: #ff0000; /* Red */
-      }
-      16% {
-        color: #ff7f00; /* Orange */
-      }
-      33% {
-        color: #ffff00; /* Yellow */
-      }
-      50% {
-        color: #00ff00; /* Green */
-      }
-      66% {
-        color: #0000ff; /* Blue */
-      }
-      83% {
-        color: #4b0082; /* Indigo */
-      }
-      100% {
-        color: #9400d3; /* Violet */
-      }
-    }
+        #profile-pic {
+            border-radius: 50%;
+            box-shadow: 0 0 20px #ffffff;
+        }
 
-    /* Customize the Spotify embed */
-    .spotify-embed {
-      border-radius: 12px;
-      width: 100%;
-      height: 352px;
-    }
+        h1 {
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s infinite;
+        }
 
-    /* Floating and spinning animation for "Eerie was here" text */
-    .floating-text {
-      position: absolute;
-      animation: floatAndSpin 10s linear infinite, rainbow 5s infinite;
-    }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    @keyframes floatAndSpin {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      25% {
-        transform: translate(100px, 100px) rotate(90deg);
-      }
-      50% {
-        transform: translate(0, 200px) rotate(180deg);
-      }
-      75% {
-        transform: translate(-100px, 100px) rotate(270deg);
-      }
-      100% {
-        transform: translate(0, 0) rotate(360deg);
-      }
-    }
+        .social-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid black;
+        }
 
-    /* Mobile Styles */
-    @media only screen and (max-width: 600px) {
-      body {
-        padding-top: 20px; /* Adjust spacing for smaller screens */
-      }
-    }
-  </style>
+        .social-link i {
+            margin-right: 8px;
+        }
+
+        .social-link:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+
+            16% {
+                color: #ff7f00;
+            }
+
+            33% {
+                color: #ffff00;
+            }
+
+            50% {
+                color: #00ff00;
+            }
+
+            66% {
+                color: #0000ff;
+            }
+
+            83% {
+                color: #4b0082;
+            }
+
+            100% {
+                color: #9400d3;
+            }
+        }
+
+        .spotify-embed {
+            border-radius: 12px;
+            width: 100%;
+            height: 352px;
+        }
+
+        .floating-text {
+            position: absolute;
+            animation: floatAndSpin 10s linear infinite, rainbow 5s infinite;
+        }
+
+        @keyframes floatAndSpin {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(100px, 100px) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(0, 200px) rotate(180deg);
+            }
+
+            75% {
+                transform: translate(-100px, 100px) rotate(270deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                padding-top: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg" alt="Profile Picture" width="200" height="200">
-    <h1>Welcome to my social page?!?!</h1>
-  </header>
+    <header>
+        <img id="profile-pic"
+            src="https://cdn.discordapp.com/attachments/1169213379429281835/1194667842516287639/27c37d14a9ad90ec085b9f099c49c319.jpg"
+            alt="Profile Picture" width="200" height="200">
+        <h1>Welcome to my social page?!?!</h1>
+    </header>
 
-  <nav>
-    <ul class="social-links">
-      <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i class="fab fa-instagram"></i> @swxlol</a></li>
-      <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i class="fab fa-instagram"></i> @inthaspotlight</a></li>
-      <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i class="fab fa-roblox"></i> @rottingsight</a></li>
-      <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i class="fab fa-roblox"></i> @swx</a></li>
-      <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul class="social-links">
+            <li><a class="social-link" href="https://www.instagram.com/swxlol/" target="_blank"><i
+                        class="fab fa-instagram"></i> @swxlol</a></li>
+            <li><a class="social-link" href="https://www.instagram.com/inthaspotlight/" target="_blank"><i
+                        class="fab fa-instagram"></i> @inthaspotlight</a></li>
+            <li><a class="social-link" href="https://www.roblox.com/users/4126963942/profile" target="_blank"><i
+                        class="fab fa-roblox"></i> @rottingsight</a></li>
+            <li><a class="social-link" href="https://www.roblox.com/users/4286115939/profile" target="_blank"><i
+                        class="fab fa-roblox"></i> @swx</a></li>
+            <li><a class="social-link" href="https://discord.com/users/512067578974437378" target="_blank"
+                    rel="noopener"><i class="fab fa-discord"></i> Discord Profile</a></li>
+        </ul>
+    </nav>
 
-  <!-- Updated Spotify Embed Code -->
-  <section>
-    <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>
+    <section>
+        <iframe class="spotify-embed"
+            src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0"
+            frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+    </section>
 
-  <!-- Floating and spinning "Eerie was here" text -->
-  <div class="floating-text">
-    <h2>Eerie was here</h2>
-  </div>
+    <div class="floating-text">
+        <h2>Eerie was here</h2>
+    </div>
 </body>
+
 </html>
