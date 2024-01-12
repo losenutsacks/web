@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background-color: #f4f4f4;
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -75,10 +74,25 @@
             color: white;
         }
 
+        .spotify-container {
+            position: relative;
+        }
+
         .spotify-embed {
             border-radius: 12px;
             width: 100%;
             height: 352px;
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #141414 0%, #2c2c2c 100%);
+            opacity: 0.8;
+            border-radius: 12px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -124,7 +138,8 @@
         </ul>
     </nav>
 
-    <section>
+    <section class="spotify-container">
+        <div class="background-overlay"></div>
         <iframe class="spotify-embed"
             src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0"
             frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
