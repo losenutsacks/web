@@ -101,6 +101,20 @@
                 transform: translateY(0);
             }
         }
+
+        /* Spotify Embed Styles */
+        .spotify-container {
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .spotify-embed {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+        }
     </style>
     <script>
         document.addEventListener('contextmenu', function (e) {
@@ -134,10 +148,13 @@
 
     <section>
         <!-- Spotify Embed -->
-        <iframe class="spotify-embed"
-            src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0"
-            frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
+        <div class="spotify-container">
+            <iframe class="spotify-embed"
+                src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0"
+                frameborder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </div>
     </section>
 </body>
 
