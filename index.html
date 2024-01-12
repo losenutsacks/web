@@ -12,33 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background-color: #1c1c1c;
-            color: #ffffff;
+            background-color: #f4f4f4;
+            color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding-top: 50px;
+            padding: 50px 0;
             margin: 0;
             overflow: hidden;
+        }
+
+        header {
+            margin-bottom: 50px;
         }
 
         #profile-pic {
             border-radius: 50%;
             box-shadow: 0 0 20px #ffffff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #profile-pic:hover {
+            transform: scale(1.1);
         }
 
         h1 {
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: rainbow 5s infinite;
+            font-size: 2.5em;
+            color: #4285f4;
         }
 
         .social-links {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 30px 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,57 +52,27 @@
 
         .social-link {
             display: inline-block;
-            margin: 10px;
-            padding: 12px 24px;
-            background-color: black;
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #4285f4;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1.2em;
             font-weight: bold;
             text-align: center;
-            border: 2px solid black;
+            border: 2px solid #4285f4;
         }
 
         .social-link i {
-            margin-right: 8px;
+            margin-right: 10px;
         }
 
         .social-link:hover {
             background-color: #333;
             color: white;
-        }
-
-        @keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-
-            16% {
-                color: #ff7f00;
-            }
-
-            33% {
-                color: #ffff00;
-            }
-
-            50% {
-                color: #00ff00;
-            }
-
-            66% {
-                color: #0000ff;
-            }
-
-            83% {
-                color: #4b0082;
-            }
-
-            100% {
-                color: #9400d3;
-            }
         }
 
         .spotify-embed {
@@ -105,36 +81,21 @@
             height: 352px;
         }
 
-        .floating-text {
-            position: absolute;
-            animation: floatAndSpin 10s linear infinite, rainbow 5s infinite;
-        }
-
-        @keyframes floatAndSpin {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            25% {
-                transform: translate(100px, 100px) rotate(90deg);
-            }
-
-            50% {
-                transform: translate(0, 200px) rotate(180deg);
-            }
-
-            75% {
-                transform: translate(-100px, 100px) rotate(270deg);
-            }
-
-            100% {
-                transform: translate(0, 0) rotate(360deg);
-            }
-        }
-
         @media only screen and (max-width: 600px) {
             body {
-                padding-top: 20px;
+                padding: 20px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-link {
+                margin: 10px;
             }
         }
     </style>
@@ -169,10 +130,6 @@
             frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"></iframe>
     </section>
-
-    <div class="floating-text">
-        <h2>Eerie was here</h2>
-    </div>
 </body>
 
 </html>
