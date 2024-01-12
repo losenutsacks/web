@@ -10,12 +10,15 @@
     <meta property="og:image"
         content="https://media.discordapp.net/attachments/1193017849627803740/1194491159423225966/noFilter-1.png?ex=65b08b94&is=659e1694&hm=008d65efee20efb18f341e9d9c3eb24796c7af8ddc5b1f2a87bbefd0bf918836&=&format=webp&quality=lossless&width=89&height=89">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourCustomFont"> <!-- Replace with your custom font -->
     <style>
         /* General Styles */
         body {
             background: linear-gradient(45deg, #1c1c1c, #292929);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s infinite alternate;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'YourCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding-top: 50px;
             margin: 0;
@@ -24,6 +27,7 @@
 
         header {
             margin-bottom: 30px;
+            animation: fadeInDown 1s ease-in-out;
         }
 
         /* Profile Picture Styles */
@@ -42,6 +46,7 @@
             animation: rainbow 1s infinite;
             font-weight: bold;
             font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Social Links Styles */
@@ -62,7 +67,7 @@
             color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
@@ -80,6 +85,8 @@
         .social-link:hover {
             background-color: #168f3f;
             color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
         /* Rainbow Animation Styles */
@@ -120,74 +127,30 @@
             height: 352px;
         }
 
-        /* Contact Section Styles */
-        .contact-section {
-            background: linear-gradient(45deg, #292929, #1c1c1c);
-            padding: 50px 0;
-            color: #ffffff;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ffffff;
-            border-radius: 5px;
-            background: transparent;
-            color: #ffffff;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-        }
-
-        .form-group button {
-            background-color: #1db954;
-            color: #ffffff;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .form-group button:hover {
-            background-color: #168f3f;
-            color: #ffffff;
-        }
-
-        /* Footer Styles */
-        footer {
-            background: #292929;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
         /* Responsive Styles */
         @media only screen and (max-width: 600px) {
             body {
                 padding-top: 20px;
+            }
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -229,33 +192,6 @@
             frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"></iframe>
     </section>
-
-    <div class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <form action="https://discord.com/users/512067578974437378" method="get">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 My Socials | Designed by Your One And Only Swx</p>
-    </footer>
 </body>
 
 </html>
