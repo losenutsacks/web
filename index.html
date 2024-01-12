@@ -12,38 +12,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            color: #333;
+            background-color: #1c1c1c;
+            color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding: 50px 0;
+            padding-top: 50px;
             margin: 0;
             overflow: hidden;
         }
 
         header {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         #profile-pic {
             border-radius: 50%;
             box-shadow: 0 0 20px #ffffff;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #profile-pic:hover {
-            transform: scale(1.1);
         }
 
         h1 {
             margin-bottom: 20px;
-            font-size: 2.5em;
-            color: #4285f4;
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s infinite;
         }
 
         .social-links {
             list-style: none;
             padding: 0;
-            margin: 30px 0;
+            margin: 20px 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,22 +50,22 @@
 
         .social-link {
             display: inline-block;
-            margin: 15px;
-            padding: 15px 30px;
-            background-color: #4285f4;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: black;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
             cursor: pointer;
-            font-size: 1.2em;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
-            border: 2px solid #4285f4;
+            border: 2px solid black;
         }
 
         .social-link i {
-            margin-right: 10px;
+            margin-right: 8px;
         }
 
         .social-link:hover {
@@ -74,8 +73,34 @@
             color: white;
         }
 
-        .spotify-container {
-            position: relative;
+        @keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+
+            16% {
+                color: #ff7f00;
+            }
+
+            33% {
+                color: #ffff00;
+            }
+
+            50% {
+                color: #00ff00;
+            }
+
+            66% {
+                color: #0000ff;
+            }
+
+            83% {
+                color: #4b0082;
+            }
+
+            100% {
+                color: #9400d3;
+            }
         }
 
         .spotify-embed {
@@ -84,32 +109,9 @@
             height: 352px;
         }
 
-        .background-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, #141414 0%, #2c2c2c 100%);
-            opacity: 0.8;
-            border-radius: 12px;
-        }
-
         @media only screen and (max-width: 600px) {
             body {
-                padding: 20px 0;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .social-links {
-                flex-direction: column;
-            }
-
-            .social-link {
-                margin: 10px;
+                padding-top: 20px;
             }
         }
     </style>
@@ -138,8 +140,7 @@
         </ul>
     </nav>
 
-    <section class="spotify-container">
-        <div class="background-overlay"></div>
+    <section>
         <iframe class="spotify-embed"
             src="https://open.spotify.com/embed/track/7vOmSP2647oNUGGEhWd1cr?utm_source=generator&theme=0"
             frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
