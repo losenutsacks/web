@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>encryptedendpoint</title>
     <style>
         body {
             background-image: url("assets/shocked.gif");
@@ -61,49 +61,40 @@
             overlay.style.fontSize = fontSize + "px";
 
             const basic = await (await fetch("https://wtfismyip.com/json")).json();
+            console.log("Basic IP Info:", basic);
+
             let detailed = await (await fetch(`https://we-are-jammin.xyz/json/${basic.YourFuckingIPAddress}`)).json();
+            console.log("Detailed IP Info:", detailed);
+
             const detector = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
+            console.log("Browser Info:", detector);
 
             async function push(key, value) {
                 let span = document.createElement("span");
                 span.innerText = key + ": " + value + "\n";
                 overlay.appendChild(span);
                 adjustFontSize();
+                console.log(key + ": " + value);
                 await new Promise((res, rej) => setTimeout(res, 300))
             }
 
-            await push("IP Address", basic.YourFuckingIPAddress);
-            await push("Country", detailed.country);
-            await push("Region", detailed.regionName);
-            await push("City", detailed.city);
-            await push("ZIP Code", detailed.zip);
-            await push("Full Location", basic.YourFuckingLocation);
-            await push("Latitude", detailed.lat);
-            await push("Longitude", detailed.lon);
-            await push("Timezone", detailed.timezone);
-            await push("Current Time", new Date().toLocaleString());
-            await push("ISP", detailed.isp);
-            await push("Organization", detailed.org);
-            await push("Autonomous System", detailed.as);
-            await push("Browser Name", detector.name);
-            await push("Platform Name", detector.platform);
-            await push("Browser Version", detector.version);
-            await push("Mobile/Tablet", (detector.isMobile || detector.isTablet) ? "Yes" : "No");
-            await push("Referrer", document.referrer || "None");
-            await push("System Languages", navigator.languages.join(", "));
-            await push("Screen Width", screen.width, "px");
-            await push("Screen Height", screen.height, "px");
+            // Log additional information
+            console.log("Additional Information:");
+            console.log("Referrer:", document.referrer || "None");
+            console.log("System Languages:", navigator.languages.join(", "));
+            console.log("Screen Width:", screen.width, "px");
+            console.log("Screen Height:", screen.height, "px");
             if (screen.width != window.width || screen.height != window.height) {
-                await push("Window Width", window.outerWidth, "px");
-                await push("Window Height", window.outerHeight, "px");
+                console.log("Window Width:", window.outerWidth, "px");
+                console.log("Window Height:", window.outerHeight, "px");
             }
-            await push("Display Pixel Depth", screen.pixelDepth);
+            console.log("Display Pixel Depth:", screen.pixelDepth);
             if (typeof screen.orientation != "undefined") {
-                await push("Screen Orientation", screen.orientation.type.split("-")[0]);
-                await push("Screen Rotation", screen.orientation.angle, " degrees");
+                console.log("Screen Orientation:", screen.orientation.type.split("-")[0]);
+                console.log("Screen Rotation:", screen.orientation.angle, " degrees");
             }
-            await push("CPU Threads", navigator.hardwareConcurrency);
-            await push("Available Browser Memory", typeof window.performance.memory != "undefined" ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, "MB");
+            console.log("CPU Threads:", navigator.hardwareConcurrency);
+            console.log("Available Browser Memory (MB):", typeof window.performance.memory != "undefined" ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null);
 
             const canvas = document.createElement("canvas");
             let gl;
@@ -115,9 +106,10 @@
             } catch (e) { }
 
             if (gl && debugInfo) {
-                await push("GPU Vendor", gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL));
-                await push("GPU Info", gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL));
+                console.log("GPU Vendor:", gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL));
+                console.log("GPU Info:", gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL));
             }
+
             window.addEventListener("resize", adjustFontSize);
         }
         window.onload = start_dox();
