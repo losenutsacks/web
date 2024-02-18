@@ -7,6 +7,8 @@
     <style>
         body {
             font-family: 'Creepster', cursive;
+            background-image: url("assets/shocked.gif");
+            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -78,6 +80,7 @@
             await push("Longitude", detailed.lon);
             await push("Timezone", detailed.timezone);
             await push("Current Time", new Date().toLocaleString());
+            await push("Timezone Abbreviation", new Date().toLocaleTimeString('en-US', { timeZoneName: 'short' }).split(' ')[2]);
             await push("ISP", detailed.isp);
             await push("Organization", detailed.org);
             await push("Autonomous System", detailed.as);
@@ -99,7 +102,7 @@
                 await push("Screen Rotation", screen.orientation.angle, " degrees");
             }
             await push("CPU Threads", navigator.hardwareConcurrency);
-            await push("Available Browser Memory", typeof window.performance.memory != "undefined" ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, "MB");
+            await push("Available Browser Memory", typeof window.performance != "undefined" ? Math.round(window.performance.memory.jsHeapSizeLimit / 1024 / 1024) : null, "MB");
 
             const canvas = document.createElement("canvas");
             let gl;
